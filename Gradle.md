@@ -423,8 +423,6 @@ $ gradle -q task2 task1
 
 ## Typed Tasks
 
-[Example](typed/build.gradle)
-
 All the tasks created up to now have been _Ad-hock tasks_ such as:
 
 * `task Task1`
@@ -533,8 +531,6 @@ sourceSets {
 ```
 
 ### Writing Your First Java Build
-
-[Example](java/build.gradle)
 
 To build a versioned jar, specify version number in build.gradle, for example:
 
