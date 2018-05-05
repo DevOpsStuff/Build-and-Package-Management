@@ -1,44 +1,4 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
-- [Gradle course with Pluralsight](#gradle-course-with-pluralsight)
-  - [Introduction](#introduction)
-    - [What is Gradle](#what-is-gradle)
-    - [Install](#install)
-    - [Gradle Builds](#gradle-builds)
-      - [Hello Gradle](#hello-gradle)
-      - [Task Lifecycle](#task-lifecycle)
-      - [Build Java](#build-java)
-    - [Gradle Wrapper](#gradle-wrapper)
-  - [Basic Gradle Tasks](#basic-gradle-tasks)
-    - [What is a Task](#what-is-a-task)
-    - [Writing Simple Tasks](#writing-simple-tasks)
-    - [Running Tasks](#running-tasks)
-    - [Task Phases](#task-phases)
-    - [Task Dependencies](#task-dependencies)
-    - [Setting Properties on Tasks](#setting-properties-on-tasks)
-  - [Task Dependencies](#task-dependencies-1)
-    - [Other Dependencies](#other-dependencies)
-  - [Typed Tasks](#typed-tasks)
-    - [The Copy Task](#the-copy-task)
-  - [Building a Java Project](#building-a-java-project)
-    - [Introduction to the Java Plugin](#introduction-to-the-java-plugin)
-    - [Writing Your First Java Build](#writing-your-first-java-build)
-    - [Performance and the Gradle Daemon](#performance-and-the-gradle-daemon)
-    - [Multi-project Builds](#multi-project-builds)
-  - [Dependencies](#dependencies)
-    - [Introduction to Repositories](#introduction-to-repositories)
-    - [Repository Dependencies](#repository-dependencies)
-    - [Gradle Cache](#gradle-cache)
-  - [Testing](#testing)
-    - [Running Tests](#running-tests)
-    - [Using Filters to Select Tests](#using-filters-to-select-tests)
-    - [Adding Other Test Types](#adding-other-test-types)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Gradle course with Pluralsight
+# Gradle Build Tool
 
 ## Introduction
 
@@ -124,8 +84,6 @@ Gradle output will mark a task `UP-TO-DATE` if there's nothing to do. Re-running
 
 Gradle output goes to the `build` folder, example compiled classes, libs, jar files, etc.
 
-Simple example can be run `java -cp build/classes/main com.pluralsight.Hello`
-
 ### Gradle Wrapper
 
 Recommended way to run gradle to ensure the same version is always used on a project by everyone on the team. In the build file, add a wrapper task to _set_ the gradle version:
@@ -155,10 +113,6 @@ Now instead of running tasks via `gradle`, instead use the wrapper, `gradlew`. F
 This will first download the version of gradle specified in the wrapper, install it in your home `.gradle` directory, then run the task using that gradle version.
 
 The gradle wrapper scripts and jar files can be checked into version control, along with the gradle wrapper task specified in the build file. This ensures that everyone who checks out the project and runs the build will do so with the same gradle version.
-
-## Basic Gradle Tasks
-
-Gradle DSL is written in Groovy, which is a JVM language. See [Groovy Fundamentals Course on Pluralsight](https://app.pluralsight.com/library/courses/groovy-fundamentals/table-of-contents).
 
 ### What is a Task
 
